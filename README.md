@@ -27,6 +27,7 @@ Video Input → Frame Extraction → YOLOv8 Detection → CLIP+FAISS Matching �
 - **Dataset Manager** (`data/dataset_manager.py`) - Handles 10 videos + 200 products
 
 ## Expected Output Format
+```
 
 \`\`\`json
 {
@@ -43,6 +44,8 @@ Video Input → Frame Extraction → YOLOv8 Detection → CLIP+FAISS Matching �
   ]
 }
 \`\`\`
+
+```
 
 ## Quick Start
 
