@@ -14,9 +14,9 @@ This is a complete implementation of Flickd's Smart Tagging & Vibe Classificatio
 
 ## Architecture
 
-\`\`\`
+```
 Video Input → Frame Extraction → YOLOv8 Detection → CLIP+FAISS Matching → NLP Vibe Classification → JSON Output
-\`\`\`
+```
 
 ### Core Components
 
@@ -48,7 +48,7 @@ Video Input → Frame Extraction → YOLOv8 Detection → CLIP+FAISS Matching �
 
 ### 1. Setup Environment
 
-\`\`\`bash
+```
 # Install dependencies
 pip install ultralytics torch torchvision transformers
 pip install clip-by-openai faiss-cpu opencv-python pillow
@@ -56,29 +56,29 @@ pip install fastapi uvicorn pandas numpy scikit-learn
 
 # Download spaCy model
 python -m spacy download en_core_web_sm
-\`\`\`
+```
 
 ### 2. Initialize Dataset
 
-\`\`\`bash
+```
 # Create complete dataset (10 videos + 200 products + vibes taxonomy)
 python data/dataset_manager.py
-\`\`\`
+```
 
 ### 3. Start API Server
 
-\`\`\`bash
+```
 # Launch FastAPI server
 python api/main.py
 
 # API will be available at:
 # - Docs: http://localhost:8000/docs
 # - Interactive: http://localhost:8000/redoc
-\`\`\`
+```
 
 ### 4. Process Videos
 
-\`\`\`bash
+```
 # Single video processing
 curl -X POST "http://localhost:8000/process-video" \\
   -F "video=@sample_video.mp4" \\
@@ -86,11 +86,11 @@ curl -X POST "http://localhost:8000/process-video" \\
 
 # Batch processing (all 10 videos)
 python scripts/batch_process.py
-\`\`\`
+```
 
 ## Project Structure
 
-\`\`\`
+```
 flickd-ai-hackathon/
 ├── api/
 │   └── main.py                 # FastAPI server with all endpoints
@@ -109,7 +109,7 @@ flickd-ai-hackathon/
 ├── app/
 │   └── page.tsx               # Web demo interface
 └── README.md
-\`\`\`
+```
 
 ## Supported Vibes
 
@@ -152,14 +152,14 @@ flickd-ai-hackathon/
 - Batch processing capabilities
 
 ### **Accurate Detection**  
-- YOLOv8 with fashion-specific filtering
+- YOLOv8 with fashion specific filtering
 - Smart keyframe extraction for 5-15s videos
 - Confidence thresholding and duplicate removal
 
 ### **Intelligent Matching**
 - CLIP embeddings for semantic similarity
 - FAISS index for fast search across 200 products
-- Multi-tier matching (exact/similar/no_match)
+- Multi tier matching (exact/similar/no_match)
 
 ### **Smart Vibe Classification**
 - Advanced NLP with keyword + hashtag analysis
@@ -168,34 +168,36 @@ flickd-ai-hackathon/
 
 ### **Web Demo**
 - Interactive UI for testing
-- Real-time processing with progress bars
+- Real time processing with progress bars
 - JSON download functionality
 
 ## Configuration
 
 ### Environment Variables
-\`\`\`bash
+```
 # Optional: GPU acceleration
 CUDA_VISIBLE_DEVICES=0
 
 # API Configuration  
+
 API_HOST=0.0.0.0
 API_PORT=8000
 
 # Model Configuration
+
 YOLO_MODEL_SIZE=n  # n, s, m, l, x
 CLIP_MODEL=ViT-B/32
 CONFIDENCE_THRESHOLD=0.5
-\`\`\`
+```
 
 ### Similarity Thresholds
-\`\`\`python
+```
 thresholds = {
     'exact': 0.88,    # Very high similarity
     'similar': 0.72,  # Good similarity  
     'no_match': 0.72  # Below this is no match
 }
-\`\`\`
+```
 
 ## Performance Benchmarks
 
@@ -208,20 +210,22 @@ thresholds = {
 ## Deployment
 
 ### Local Development
-\`\`\`bash
+```
 # Start development server
 uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
-\`\`\`
+```
 
 ### Production Deployment
-\`\`\`bash
+```
 # Using Docker
 docker build -t flickd-ai-engine .
 docker run -p 8000:8000 flickd-ai-engine
+```
 
 # Using Gunicorn
+```
 gunicorn api.main:app -w 4 -k uvicorn.workers.UvicornWorker
-\`\`\`
+```
 
 ## API Documentation
 
@@ -247,21 +251,25 @@ Classify vibes from text only
 
 ## Testing
 
-\`\`\`bash
+```
 # Run component tests
 python models/video_processor.py
 python models/product_matcher.py  
 python models/vibe_classifier.py
+```
 
 # Test API endpoints
+```
 curl -X GET "http://localhost:8000/health"
 curl -X GET "http://localhost:8000/supported-vibes"
+```
 
 # Process sample video
+```
 curl -X POST "http://localhost:8000/process-video" \\
   -F "video=@data/videos/sample.mp4" \\
   -F "caption=Coquette vibes with pink bow dress"
-\`\`\`
+```
 
 ## Results & Analytics
 
