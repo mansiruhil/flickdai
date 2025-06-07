@@ -1,4 +1,4 @@
-# Flickd
+# Flickd AI
 
 > **Production ready MVP for Gen Z fashion discovery through AI powered video analysis**
 
