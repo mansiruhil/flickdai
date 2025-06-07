@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is a complete implementation of Flickd's Smart Tagging & Vibe Classification Engine for the AI Hackathon. The system processes short fashion videos (5-15s) to automatically:
+The system processes short fashion videos (5-15s) to automatically:
 
 1. **Extract keyframes** from creator videos
 2. **Detect fashion items** using YOLOv8 object detection  
