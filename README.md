@@ -26,7 +26,7 @@ Video Input → Frame Extraction → YOLOv8 Detection → CLIP+FAISS Matching �
 - **API Server** (`api/main.py`) - FastAPI production endpoints
 - **Dataset Manager** (`data/dataset_manager.py`) - Handles 10 videos + 200 products
 
-## Expected Output Format (system should return a JSON output per video)
+## Expected Output Format (JSON output per video)
 ```
 {
   "video_id": "abc123",
