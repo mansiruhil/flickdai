@@ -1,0 +1,151 @@
+{
+  "supported_vibes": [
+    {
+      "name": "Coquette",
+      "description": "Feminine, delicate aesthetic with bows, ribbons, and soft colors",
+      "keywords": [
+        "bow",
+        "ribbon",
+        "pink",
+        "feminine",
+        "delicate",
+        "sweet",
+        "cute",
+        "girly",
+        "romantic",
+        "soft",
+        "pastel",
+        "lace",
+        "floral",
+        "pearl"
+      ],
+      "color_palette": ["pink", "white", "cream", "pastel"],
+      "typical_items": ["bows", "ribbons", "lace", "pearls", "floral dresses"]
+    },
+    {
+      "name": "Clean Girl",
+      "description": "Minimal, natural, effortless beauty and style",
+      "keywords": [
+        "minimal",
+        "natural",
+        "effortless",
+        "simple",
+        "fresh",
+        "dewy",
+        "no-makeup",
+        "slicked",
+        "glass skin",
+        "minimalist",
+        "clean"
+      ],
+      "color_palette": ["neutral", "beige", "white", "natural"],
+      "typical_items": ["simple jewelry", "neutral clothing", "natural makeup"]
+    },
+    {
+      "name": "Cottagecore",
+      "description": "Rural, vintage-inspired aesthetic celebrating countryside life",
+      "keywords": [
+        "cottage",
+        "rural",
+        "vintage",
+        "floral",
+        "prairie",
+        "countryside",
+        "garden",
+        "rustic",
+        "pastoral",
+        "nature",
+        "wildflower",
+        "meadow"
+      ],
+      "color_palette": ["earth tones", "floral", "vintage", "muted"],
+      "typical_items": ["floral dresses", "vintage items", "natural fabrics"]
+    },
+    {
+      "name": "Streetcore",
+      "description": "Urban, edgy street style with attitude",
+      "keywords": [
+        "street",
+        "urban",
+        "edgy",
+        "grunge",
+        "punk",
+        "alternative",
+        "rebel",
+        "cool",
+        "attitude",
+        "underground",
+        "raw",
+        "gritty"
+      ],
+      "color_palette": ["black", "dark", "bold", "neon"],
+      "typical_items": ["leather", "denim", "sneakers", "bold accessories"]
+    },
+    {
+      "name": "Y2K",
+      "description": "Early 2000s futuristic aesthetic with metallic and tech elements",
+      "keywords": [
+        "y2k",
+        "2000s",
+        "metallic",
+        "holographic",
+        "cyber",
+        "futuristic",
+        "tech",
+        "digital",
+        "neon",
+        "chrome",
+        "space",
+        "millennium"
+      ],
+      "color_palette": ["metallic", "neon", "chrome", "holographic"],
+      "typical_items": ["metallic clothing", "tech accessories", "futuristic sunglasses"]
+    },
+    {
+      "name": "Boho",
+      "description": "Bohemian free-spirit aesthetic with flowing, artistic elements",
+      "keywords": [
+        "bohemian",
+        "free-spirit",
+        "hippie",
+        "flowing",
+        "earthy",
+        "natural",
+        "fringe",
+        "ethnic",
+        "wanderlust",
+        "festival",
+        "artistic",
+        "eclectic"
+      ],
+      "color_palette": ["earth tones", "warm", "natural", "jewel tones"],
+      "typical_items": ["flowing fabrics", "fringe", "ethnic jewelry", "natural materials"]
+    },
+    {
+      "name": "Party Glam",
+      "description": "Glamorous, sparkly aesthetic for special occasions and nightlife",
+      "keywords": [
+        "glam",
+        "sparkle",
+        "sequin",
+        "glitter",
+        "party",
+        "night out",
+        "dramatic",
+        "bold",
+        "statement",
+        "luxury",
+        "elegant",
+        "chic"
+      ],
+      "color_palette": ["gold", "silver", "black", "jewel tones"],
+      "typical_items": ["sequins", "glitter", "statement jewelry", "dramatic makeup"]
+    }
+  ],
+  "classification_rules": {
+    "max_vibes_per_video": 3,
+    "minimum_confidence": 0.6,
+    "keyword_weight": 0.7,
+    "context_weight": 0.3
+  }
+}
