@@ -1,0 +1,22 @@
+{
+  "video_id": "video_543019",
+  "vibes": [
+    "Clean Girl"
+  ],
+  "products": [
+    {
+      "type": "dress",
+      "color": "black",
+      "match_type": "similar",
+      "matched_product_id": "prod_456",
+      "confidence": 0.84
+    },
+    {
+      "type": "earrings",
+      "color": "gold",
+      "match_type": "exact",
+      "matched_product_id": "prod_789",
+      "confidence": 0.92
+    }
+  ]
+}
